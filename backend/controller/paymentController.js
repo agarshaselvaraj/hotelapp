@@ -7,7 +7,7 @@ require("dotenv").config();
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
+});   
 
 // Generate Payment Order
 exports.initiatePayment = async (req, res) => {
