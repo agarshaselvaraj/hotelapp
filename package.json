@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cloudinary": "^2.5.1",
+    "concurrently": "^9.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.0",
+    "paytmchecksum": "^1.5.1",
+    "pg": "^8.13.1",
+    "pg-promise": "^11.10.2",
+    "postcss": "^8.4.49",
+    "razorpay": "^2.9.5",
+    "sequelize": "^6.37.5",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && node server.js",
+    "client": "cd frontend && npm run dev"
+  }
+}
