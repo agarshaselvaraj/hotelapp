@@ -77,6 +77,28 @@ router.get("/bookings/customer/:customerId", async (req, res) => {
     res.status(500).json({ error: "Error retrieving customer bookings" });
   }
 });
+router.put("/api/bookings/customer/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { payment_status } = req.body;
+
+    const updatedBooking = await BookingModel.findByIdAndUpdate(
+      id,
+      { payment_status },
+      { new: true }
+    );
+
+    if (!updatedBooking) {
+      return res.status(404).json({ message: "Booking not found" });
+    }
+
+    res.json(updatedBooking);
+  } catch (error) {
+    console.error("Error updating booking:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 
 
 module.exports = router;

@@ -244,24 +244,24 @@ const Searchpage = () => {
             <div>
               <h2 className="pt-3 font-bold">Property Rating</h2>
               <div>
-                <input type="checkbox" id="onestar" onChange={handleFilterChange}/>
-                <label htmlFor="onestar"className="ml-2">1 Star</label>
+                <input type="checkbox" id="onestar" onChange={handleFilterChange} className='w-4 h-4 accent-blue-600'/>
+                <label htmlFor="onestar"className="ml-2 cursor-pointer text-gray-700">1 Star</label>
               </div>
               <div>
-                <input type="checkbox" id="twostar"onChange={handleFilterChange} />
-                <label htmlFor="twostar"className="ml-2">2 Star</label>
+                <input type="checkbox" id="twostar"onChange={handleFilterChange} className="w-4 h-4 accent-blue-600" />
+                <label htmlFor="twostar"className="ml-2 cursor-pointer text-gray-700">2 Star</label>
               </div>
               <div>
-                <input type="checkbox" id="threestar"onChange={handleFilterChange} />
-                <label htmlFor="threestar"className="ml-2">3 Star</label>
+                <input type="checkbox" id="threestar"onChange={handleFilterChange} className="w-4 h-4 accent-blue-600" />
+                <label htmlFor="threestar"className="ml-2 cursor-pointer text-gray-700">3 Star</label>
               </div>
               <div>
-                <input type="checkbox" id="fourstar"onChange={handleFilterChange} />
-                <label htmlFor="fourstar"className="ml-2">4 Star</label>
+                <input type="checkbox" id="fourstar"onChange={handleFilterChange}className="w-4 h-4 accent-blue-600" />
+                <label htmlFor="fourstar"className="ml-2 cursor-pointer text-gray-700">4 Star</label>
               </div>
               <div>
-                <input type="checkbox" id="fivestar"onChange={handleFilterChange} />
-                <label htmlFor="fivestar"className="ml-2">5 Star</label>
+                <input type="checkbox" id="fivestar"onChange={handleFilterChange} className="w-4 h-4 accent-blue-600 "/>
+                <label htmlFor="fivestar"className="ml-2 cursor-pointer text-gray-700">5 Star</label>
               </div>
           </div>
           <button

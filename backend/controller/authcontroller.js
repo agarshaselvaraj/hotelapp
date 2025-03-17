@@ -55,8 +55,9 @@ const loginUser = async (req, res) => {
             return res.status(400).json({ message: "Invalid credentials" });
         }
         req.session.user = { id: user.id, email: user.email };
-        console.log("User logged in:", req.session.user);
-
+        req.session.userId = user.id;
+        
+         console.log("UserId",user.id);
         // Generate JWT token
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
 

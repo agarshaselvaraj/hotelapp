@@ -7,14 +7,14 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Check if token exists in sessionStorage on app load
+    // Check if session storage 
     const token = sessionStorage.getItem("token");
-    setIsLoggedIn(!!token); // Set true if token exists, false otherwise
+    setIsLoggedIn(!!token); 
   }, []);
 
   const login = (token) => {
     setIsLoggedIn(true);
-    sessionStorage.setItem("token", token); // Store token in sessionStorage
+    sessionStorage.setItem("token", token); // Store token 
   };
 
   const logout = () => {

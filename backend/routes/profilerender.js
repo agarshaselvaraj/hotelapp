@@ -11,7 +11,7 @@ const pool = new Pool({
 router.get("/profilerender", async (req, res) => {
   try {
     // Replace with the actual logic for fetching the logged-in user's ID
-    const userId = 1;
+    const userId = req.session.userId;
 
     // Select only specific fields
     const result = await pool.query(
@@ -20,8 +20,11 @@ router.get("/profilerender", async (req, res) => {
     );
 
     if (result.rows.length === 0) {
+      console.log("No user found for ID:", userId);
       return res.status(404).json({ message: "User not found" });
     }
+
+    console.log("Fetched Profile Data:", result.rows[0]);
 
     // Send only the selected fields to the client
     res.json(result.rows[0]);
